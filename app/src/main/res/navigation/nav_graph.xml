@@ -25,4 +25,79 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <activity
+        android:id="@+id/MainActivity"
+        android:name="com.example.just20minutes.MainActivity"
+        android:label="intro_fragment"
+        tools:layout="@layout/main_activity" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.just20minutes.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_toDoFragment"
+            app:destination="@id/toDoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toDoFragment"
+        android:name="com.example.just20minutes.ToDoFragment"
+        android:label="fragment_to_do"
+        tools:layout="@layout/fragment_to_do" >
+        <action
+            android:id="@+id/action_toDoFragment_to_addToDo"
+            app:destination="@id/addToDo" />
+        <action
+            android:id="@+id/action_toDoFragment_to_selectToDo"
+            app:destination="@id/selectToDo" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.just20minutes.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" >
+        <action
+            android:id="@+id/action_timerFragment_to_checkUpFragment"
+            app:destination="@id/checkUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDo"
+        android:name="com.example.just20minutes.AddToDo"
+        android:label="fragment_add_to_do"
+        tools:layout="@layout/fragment_add_to_do" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.just20minutes.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/selectToDo"
+        android:name="com.example.just20minutes.SelectToDo"
+        android:label="fragment_select_to_do"
+        tools:layout="@layout/fragment_select_to_do" >
+        <action
+            android:id="@+id/action_selectToDo_to_toDoFragment"
+            app:destination="@id/toDoFragment" />
+        <action
+            android:id="@+id/action_selectToDo_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkUpFragment"
+        android:name="com.example.just20minutes.CheckUpFragment"
+        android:label="fragment_check_up"
+        tools:layout="@layout/fragment_check_up" >
+        <action
+            android:id="@+id/action_checkUpFragment_to_selectToDo2"
+            app:destination="@id/selectToDo" />
+        <action
+            android:id="@+id/action_checkUpFragment_to_timerFragment2"
+            app:destination="@id/timerFragment" />
+    </fragment>
 </navigation>
